@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '../contexts/AppContext';
 import { useNavigate } from 'react-router-dom';
@@ -7,6 +8,7 @@ import { Order, Address } from '../types';
 import { youwareService } from '../services/youwareService';
 import { ADDRESS_DATA } from '../constants';
 import { useI18n } from '../contexts/I18nContext';
+import { DeliveryTracker } from '../components/DeliveryTracker';
 
 type PasswordFormInputs = {
     currentPassword: '';
@@ -274,27 +276,42 @@ export const ProfilePage: React.FC = () => {
                          </div>
                         <div className="bg-surface p-6 rounded-lg shadow-lg border border-white/10">
                             <h2 className="text-3xl font-bold text-primary mb-6">{t('profilePage.myOrders')}</h2>
-                            <div className="space-y-4 max-h-[80vh] overflow-y-auto pr-2">
+                            <div className="space-y-6 max-h-[80vh] overflow-y-auto pr-2">
                                 {orders.length > 0 ? (
                                     orders.map(order => (
-                                        <div key={order.id} className="border border-white/10 rounded-lg p-4">
-                                            <div className="flex justify-between items-center">
+                                        <div key={order.id} className="bg-background border border-white/10 rounded-lg p-6 shadow-md transition-all hover:shadow-primary/20 hover:border-primary/50">
+                                            <div className="flex flex-col sm:flex-row justify-between sm:items-center mb-4 pb-4 border-b border-white/10">
                                                 <div>
-                                                    <p className="font-bold text-textPrimary">{t('profilePage.orderId')}: {order.id}</p>
-                                                    <p className="text-sm text-textSecondary">{t('profilePage.date')}: {new Date(order.createdAt).toLocaleDateString()}</p>
+                                                    <p className="font-bold text-lg text-textPrimary">
+                                                        {t('profilePage.orderId')}: <span className="font-mono text-primary">{order.id.slice(-6).toUpperCase()}</span>
+                                                    </p>
+                                                    <p className="text-xs text-textSecondary">
+                                                        {t('profilePage.date')}: {new Date(order.createdAt).toLocaleDateString()}
+                                                    </p>
                                                 </div>
-                                                <p className={`font-bold ${getStatusColor(order.status)}`}>{t('orderStatus.'+order.status, order.status)}</p>
+                                                <div className="text-right mt-2 sm:mt-0">
+                                                    <p className={`font-bold text-lg ${getStatusColor(order.status)}`}>{t('orderStatus.'+order.status, order.status)}</p>
+                                                    <p className="font-bold text-textPrimary">{t('profilePage.total')}: Tk {order.grandTotal.toFixed(2)}</p>
+                                                </div>
                                             </div>
-                                            <div className="mt-2 text-textSecondary">
-                                               {order.items.map(item => (
-                                                   <p key={item.cartItemId} className="text-sm">- {item.product.name} (x{item.quantity})</p>
-                                               ))}
+                                            
+                                            <DeliveryTracker order={order} />
+                                            
+                                            <div className="mt-4 pt-4 border-t border-white/10 space-y-3">
+                                                {order.items.map(item => (
+                                                    <div key={item.cartItemId} className="flex items-center gap-4">
+                                                         <img src={item.selectedImage} alt={item.product.name} className="w-12 h-12 object-cover rounded-md"/>
+                                                         <div>
+                                                            <p className="text-sm font-semibold text-textPrimary">{item.product.name}</p>
+                                                            <p className="text-xs text-textSecondary">{t('categoryNames.'+item.product.category, item.product.category)} (x{item.quantity})</p>
+                                                         </div>
+                                                    </div>
+                                                ))}
                                             </div>
-                                            <p className="text-right font-bold mt-2 text-primary">{t('profilePage.total')}: Tk {order.grandTotal.toFixed(2)}</p>
                                         </div>
                                     ))
                                 ) : (
-                                    <p className="text-textSecondary">{t('profilePage.noOrders')}</p>
+                                    <p className="text-textSecondary text-center py-8">{t('profilePage.noOrders')}</p>
                                 )}
                             </div>
                         </div>

@@ -7,6 +7,7 @@ import { WhatsAppButton } from './components/WhatsAppButton';
 import { ChatbotWidget } from './components/ChatbotWidget';
 import { PopupModal } from './components/PopupModal';
 import { NotificationContainer } from './components/Notification';
+import { SearchModal } from './components/SearchModal';
 import { HomePage } from './pages/HomePage';
 import { ShopPage } from './pages/ShopPage';
 import { AboutPage } from './pages/AboutPage';
@@ -35,6 +36,7 @@ import { AdminFulfillmentPage } from './pages/admin/AdminFulfillmentPage';
 import { AdminProtectedRoute } from './components/AdminProtectedRoute';
 import { UserProtectedRoute } from './components/UserProtectedRoute';
 import { useEffect } from 'react';
+// Note: DeliveryTracker will be used within ProfilePage, no direct routing needed.
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();

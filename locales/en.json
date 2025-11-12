@@ -1,28 +1,28 @@
 {
   "header": {
-    "searchPlaceholder": "Search...",
+    "searchPlaceholder": "What are you looking for?",
     "navHome": "Home",
     "navShop": "Shop",
     "navAbout": "About",
     "navContact": "Contact",
     "navAdmin": "Admin",
     "changeTheme": "Change Theme",
-    "profile": "Profile",
+    "profile": "My Profile",
     "logout": "Logout"
   },
   "footer": {
-    "about": "Your one-stop shop for the latest and greatest in tech and lifestyle products.",
+    "about": "HypeHaat is Bangladesh's premier online destination for cutting-edge tech and lifestyle gear, offering lightning-fast delivery nationwide.",
     "quickLinks": "Quick Links",
     "aboutUs": "About Us",
     "contactUs": "Contact Us",
-    "shop": "Shop",
-    "support": "Support",
+    "shop": "All Products",
+    "support": "Customer Support",
     "faq": "FAQ",
     "shippingReturns": "Shipping & Returns",
     "privacyPolicy": "Privacy Policy",
-    "newsletter": "Join Our Newsletter",
-    "newsletterSub": "Get exclusive deals and updates straight to your inbox.",
-    "newsletterPlaceholder": "Your email",
+    "newsletter": "Join the Hype",
+    "newsletterSub": "Get exclusive deals and product drops straight to your inbox.",
+    "newsletterPlaceholder": "Enter your email",
     "subscribe": "Subscribe",
     "copyright": "© {0} HypeHaat. All Rights Reserved.",
     "adminPanel": "Admin Panel"
@@ -30,7 +30,7 @@
   "productCard": {
     "sale": "SALE",
     "reviews": "reviews",
-    "addedToCart": "Item added to cart!"
+    "addedToCart": "Added to cart!"
   },
   "chatbot": {
     "initialMessage": "Hello! I'm HypeHaat's AI Assistant. How can I help you find the perfect product today?"
@@ -40,25 +40,25 @@
   },
   "homePage": {
     "heroTitle": "Define Your <span class=\"text-primary\">Hype</span>",
-    "heroSubtitle": "Discover a universe of cutting-edge tech and lifestyle gear at HypeHaat.",
-    "explore": "Explore Collection",
-    "featuredTitle": "Featured Products",
-    "featuredSubtitle": "Handpicked gear to elevate your setup.",
+    "heroSubtitle": "Explore a universe of high-performance keyboards, precision mice, and essential lifestyle accessories meticulously selected to elevate your setup.",
+    "explore": "Explore the Collection",
+    "featuredTitle": "Featured Collection",
+    "featuredSubtitle": "Our top picks, curated just for you to elevate your setup.",
     "categoriesTitle": "Shop by Category",
-    "newArrivalsTitle": "New Arrivals",
+    "newArrivalsTitle": "Fresh Drops",
     "viewAll": "View All Products"
   },
   "shopPage": {
     "title": "Our Collection",
-    "subtitle": "Find the tech that fits your hype.",
+    "subtitle": "Discover your next upgrade. Browse our meticulously curated collection of tech essentials and find the perfect gear to match your hype.",
     "categories": "Categories",
-    "searchPlaceholder": "Search products...",
+    "searchPlaceholder": "Search products by name or feature...",
     "sortFeatured": "Sort by: Featured",
     "sortPriceAsc": "Sort by: Price Low to High",
     "sortPriceDesc": "Sort by: Price High to Low",
-    "sortRating": "Sort by: Average Rating",
-    "noProductsTitle": "No products found.",
-    "noProductsSubtitle": "Try adjusting your filters or search term."
+    "sortRating": "Sort by: Top Rated",
+    "noProductsTitle": "No Products Found",
+    "noProductsSubtitle": "Try adjusting your filters or search term to find what you're looking for."
   },
   "categoryNames": {
     "All": "All",
@@ -75,27 +75,27 @@
     "Cancelled": "Cancelled"
   },
   "aboutPage": {
-    "title": "About Hype<span class=\"text-primary\">Haat</span>",
+    "title": "This is Hype<span class=\"text-primary\">Haat</span>",
     "subtitle": "We are passionate about bringing you the best products that blend technology, style, and functionality.",
     "mission": "Our Mission",
-    "missionText": "Our mission is to provide an unparalleled shopping experience by offering a curated selection of high-quality products, exceptional customer service, and a seamless online platform. We believe in innovation, quality, and putting our customers first.",
+    "missionText": "To provide an unparalleled shopping experience by offering a curated selection of high-quality products, exceptional customer service, and a seamless online platform. We believe in innovation, quality, and putting our customers first.",
     "story": "Our Story",
-    "storyText": "Founded in 2023, HypeHaat started as a small project by a group of tech enthusiasts who wanted to share their passion with the world. We've grown into a trusted online retailer, but our core values of quality, innovation, and customer satisfaction remain the same. We are dedicated to helping you find products that enhance your life.",
+    "storyText": "Founded in 2023, HypeHaat started as a project by a group of tech enthusiasts who wanted to share their passion. We've grown into a trusted online retailer, but our core values of quality, innovation, and customer satisfaction remain the same. We are dedicated to helping you find products that enhance your life.",
     "whyUs": "Why Choose Us?",
-    "quality": "Quality Products",
-    "qualityText": "We handpick and test every product to ensure it meets our high standards of quality and durability.",
-    "shipping": "Fast Shipping",
-    "shippingText": "We offer fast and reliable shipping to get your new favorite items to you as quickly as possible.",
-    "support": "Excellent Support",
-    "supportText": "Our friendly support team is here to help you with any questions or issues you may have."
+    "quality": "Curated Quality",
+    "qualityText": "We handpick and test every product to ensure it meets our high standards of quality and performance.",
+    "shipping": "Nationwide Shipping",
+    "shippingText": "We offer fast and reliable shipping across Bangladesh to get your new items to you quickly.",
+    "support": "Dedicated Support",
+    "supportText": "Our friendly support team is always ready to help you with any questions or issues you may have."
   },
   "contactPage": {
     "title": "Get In Touch",
-    "subtitle": "We'd love to hear from you. Please fill out the form below.",
+    "subtitle": "We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.",
     "nameLabel": "Full Name",
     "emailLabel": "Email Address",
     "subjectLabel": "Subject",
-    "messageLabel": "Message",
+    "messageLabel": "Your Message",
     "sendMessage": "Send Message",
     "successAlert": "Thank you for your message! We will get back to you soon.",
     "errorName": "Name is required",
@@ -105,15 +105,15 @@
     "errorMessage": "Message is required"
   },
   "checkoutPage": {
-    "title": "Shopping Cart & Checkout",
-    "emptyCartTitle": "Your cart is empty.",
-    "emptyCartSubtitle": "Looks like you haven't added anything to your cart yet.",
-    "goShopping": "Go Shopping",
-    "yourItems": "Your Items",
+    "title": "Review Your Order",
+    "emptyCartTitle": "Your cart is looking a little empty.",
+    "emptyCartSubtitle": "Why not explore our collection and find something you'll love?",
+    "goShopping": "Start Shopping",
+    "yourItems": "Items in Your Cart",
     "deliveryInfo": "Delivery Information",
     "fullName": "Full Name",
     "phone": "Phone Number",
-    "selectAddress": "Select Delivery Address",
+    "selectAddress": "Select a Delivery Address",
     "addNewAddress": "Add a new address",
     "orderSummary": "Order Summary",
     "deliveryOption": "Delivery Option",
@@ -125,27 +125,27 @@
     "nagad": "Nagad",
     "rocket": "Rocket",
     "subtotal": "Subtotal",
-    "delivery": "Delivery",
+    "delivery": "Delivery Fee",
     "codFee": "COD Fee",
     "discount": "Discount ({0})",
     "grandTotal": "Grand Total",
-    "couponPlaceholder": "Coupon Code",
+    "couponPlaceholder": "Have a coupon code?",
     "apply": "Apply",
     "confirmOrder": "Confirm Order",
     "proceedToPayment": "Proceed to Payment",
     "notifications": {
       "loginRequired": "Please log in to place an order.",
-      "fillFields": "Please fill in all required fields.",
-      "cartEmpty": "Your cart is empty.",
-      "orderSuccess": "Order placed successfully!",
+      "fillFields": "Please fill in all required fields to continue.",
+      "cartEmpty": "Your cart is empty. Please add items before checking out.",
+      "orderSuccess": "Order Confirmed! Your gear is now being prepared for its journey to you.",
       "addressRequired": "Please complete the new address form."
     },
     "newAddressForm": {
       "division": "Division",
-      "zilla": "Zilla / District",
-      "upazilla": "Upazilla / Area",
-      "street": "Street Address, Road No, House No",
-      "streetRequired": "Street address is required."
+      "zilla": "District (Zilla)",
+      "upazilla": "Area (Upazilla)",
+      "street": "Full Address (e.g., House No, Road, Area)",
+      "streetRequired": "Full address is required."
     },
     "validation": {
       "nameRequired": "Full name is required.",
@@ -159,42 +159,42 @@
     "outOfStock": "Out of Stock",
     "availability": "{0} items available",
     "availabilityNone": "This option is currently out of stock.",
-    "customerReviews": "Customer Reviews",
-    "writeReview": "Write a review",
-    "rating": "Rating",
-    "comment": "Comment",
+    "customerReviews": "Customer Reviews & Feedback",
+    "writeReview": "Share Your Thoughts",
+    "rating": "Your Rating",
+    "comment": "Your Comment",
     "submitReview": "Submit Review",
-    "loginToReview": "Please <1>log in</1> to write a review.",
-    "noReviews": "No reviews yet for this product.",
-    "relatedProducts": "Related Products",
-    "cartAlert": "{0} x {1} added to cart!",
+    "loginToReview": "Please <1>log in</1> to share your experience.",
+    "noReviews": "Be the first to review this product!",
+    "relatedProducts": "You Might Also Like",
+    "cartAlert": "{0} x {1} added to your cart!",
     "reviewErrorLogin": "You must be logged in to submit a review.",
     "reviewErrorComment": "Please write a comment for your review."
   },
   "loginPage": {
-    "title": "Login to Your Account",
+    "title": "Welcome Back!",
     "emailOrPhone": "Email or Phone Number",
     "password": "Password",
     "forgotPassword": "Forgot Password?",
-    "login": "Login",
+    "login": "Log In",
     "noAccount": "Don't have an account?",
-    "registerHere": "Register here",
-    "error": "Invalid credentials. Please try again.",
+    "registerHere": "Sign up now",
+    "error": "Invalid credentials. Please check your details and try again.",
     "validation": {
       "identifierRequired": "Email or phone number is required.",
       "passwordRequired": "Password is required."
     }
   },
   "registerPage": {
-    "title": "Create a New Account",
+    "title": "Create Your Account",
     "name": "Full Name",
-    "email": "Email",
+    "email": "Email Address",
     "phone": "Phone Number",
     "password": "Password",
-    "register": "Register",
+    "register": "Create Account",
     "haveAccount": "Already have an account?",
     "loginHere": "Login here",
-    "success": "Registration successful! Please log in.",
+    "success": "Welcome to the HypeHaat family! Your account is ready. Log in to start your journey.",
     "error": "An unexpected error occurred. Please try again.",
     "validation": {
       "nameRequired": "Full name is required.",
@@ -227,7 +227,7 @@
     "orderId": "Order ID",
     "date": "Date",
     "total": "Total",
-    "noOrders": "You have not placed any orders yet.",
+    "noOrders": "You haven't placed any orders yet.",
     "addressForm": {
       "titleEdit": "Edit Address",
       "titleAdd": "Add New Address",
@@ -247,6 +247,15 @@
       "confirmPassword": "Please confirm your new password",
       "passwordsNoMatch": "Passwords do not match",
       "nameRequired": "Name is required"
+    },
+    "deliveryTracker": {
+      "awaitingShipment": "Awaiting Shipment",
+      "arrivingIn": "Arriving in {0} days",
+      "arrivingToday": "Arriving Today",
+      "arrivingTomorrow": "Arriving Tomorrow",
+      "deliveredOn": "Delivered on {0}",
+      "cancelled": "Order Cancelled",
+      "estimatedDelivery": "Estimated Delivery"
     }
   },
   "wishlistPage": {
@@ -258,7 +267,7 @@
   },
   "orderConfirmationPage": {
     "thankYou": "Thank You For Your Order!",
-    "successMessage": "Your order has been placed successfully.",
+    "successMessage": "Your order has been placed and is now being processed.",
     "orderId": "Your Order ID is: <1>{0}</1>",
     "contactMessage": "We will contact you shortly with delivery details.",
     "summaryTitle": "Order Summary",
@@ -268,9 +277,12 @@
     "shippingTo": "Shipping To",
     "grandTotal": "Grand Total",
     "guidesTitle": "Your Product Guides",
-    "downloadDetails": "Download Product Details",
-    "noGuides": "No downloadable guides available for the items in this order.",
-    "continueShopping": "Continue Shopping"
+    "downloadDetails": "Download Guide",
+    "noGuides": "No downloadable guides are available for the items in this order.",
+    "continueShopping": "Continue Shopping",
+    "estimatedDeliveryTitle": "Estimated Delivery",
+    "deliveryTimeframeDhaka": "2-3 business days (Inside Dhaka)",
+    "deliveryTimeframeOutside": "4-5 business days (Outside Dhaka)"
   },
   "paymentVerificationPage": {
     "title": "Payment Verification",
@@ -282,19 +294,19 @@
     "orScanQr": "Or Scan the QR Code",
     "paymentGuideTitle": "How to Pay with {0}",
     "guide": {
-      "step1": "1. Open your {0} app.",
-      "step2": "2. Select the 'Payment' option.",
+      "step1": "1. Open your {0} app and select 'Payment'.",
+      "step2": "2. Scan the QR code or enter our merchant number.",
       "step3": "3. Enter our merchant number: {0}",
-      "step4": "4. Enter the amount: Tk {0}",
-      "step5": "5. Enter the transaction ID (TrxID) from the confirmation message below."
+      "step4": "4. Enter the total amount: Tk {0}",
+      "step5": "5. Complete the payment and enter the Transaction ID (TrxID) below."
     },
     "trxIdLabel": "Transaction ID (TrxID)",
-    "trxIdPlaceholder": "Enter the TrxID you received",
+    "trxIdPlaceholder": "Enter the TrxID from your confirmation message",
     "confirmButton": "Confirm Payment & Place Order",
-    "orderSuccess": "Order placed successfully! We will verify your payment.",
+    "orderSuccess": "Order placed! We will verify your payment shortly.",
     "error": {
-        "trxIdRequired": "Please enter the Transaction ID (TrxID).",
-        "trxIdInvalid": "Please enter a valid Transaction ID (8-10 alphanumeric characters)."
+      "trxIdRequired": "Please enter the Transaction ID (TrxID).",
+      "trxIdInvalid": "Please enter a valid Transaction ID (8-10 alphanumeric characters)."
     },
     "copySuccess": "{0} copied to clipboard!",
     "copyError": "Failed to copy {0}."
@@ -302,7 +314,7 @@
   "notificationsPage": {
     "title": "Notifications",
     "markAllAsRead": "Mark all as read",
-    "emptyTitle": "No notifications yet.",
+    "emptyTitle": "No new notifications.",
     "emptySubtitle": "Important updates about your orders will appear here.",
     "timeAgo": {
       "years": "{0} years ago",
@@ -315,8 +327,8 @@
   },
   "forgotPasswordPage": {
     "title": "Reset Your Password",
-    "emailStepSubtitle": "Enter your email address below. If an account exists, we'll send you a verification code.",
-    "emailLabel": "Email",
+    "emailStepSubtitle": "Enter your email address. If an account exists, we'll send a verification code.",
+    "emailLabel": "Email Address",
     "sendCode": "Send Code",
     "sending": "Sending...",
     "resetStepSubtitle": "Please check your email for the verification code.",
@@ -326,7 +338,7 @@
     "confirmPasswordLabel": "Confirm New Password",
     "resetPassword": "Reset Password",
     "requestNewCode": "Request New Code",
-    "backToLogin": "Remembered your password?",
+    "backToLogin": "Remember your password?",
     "loginHere": "Login here",
     "successMessage": "Your password has been reset successfully! Redirecting to login...",
     "goToLogin": "Go to Login",
@@ -432,7 +444,7 @@
     "variantType": "Variant Type (e.g., Color)",
     "removeVariant": "Remove Variant Type",
     "optionName": "Option Name (e.g., Red)",
-    "linkImage": "Link to Image",
+    "linkImage": "Link to Image #",
     "noLinkedImage": "No Linked Image",
     "imageNum": "Image {0}",
     "addOption": "+ Add Option",

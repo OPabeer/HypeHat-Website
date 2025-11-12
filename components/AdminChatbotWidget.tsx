@@ -100,16 +100,21 @@ export const AdminChatbotWidget: React.FC = () => {
                         functionResult = `Here are the 5 latest orders:\n` + latestOrders.map(o => `- ID: ${o.id.slice(-6)}, Customer: ${o.userName}, Total: Tk ${o.grandTotal}, Status: ${o.status}`).join('\n');
                         break;
                     case 'getOrderStatus':
-                        const order = youwareService.getAllOrders().find(o => o.id.includes(fc.args.orderId));
-                        functionResult = order ? `The status of order ${order.id.slice(-6)} is ${order.status}.` : `Sorry, I couldn't find an order with the ID containing "${fc.args.orderId}".`;
+                        // FIX: Cast `orderId` from function call arguments to string.
+                        const orderId = fc.args.orderId as string;
+                        const order = youwareService.getAllOrders().find(o => o.id.includes(orderId));
+                        functionResult = order ? `The status of order ${order.id.slice(-6)} is ${order.status}.` : `Sorry, I couldn't find an order with the ID containing "${orderId}".`;
                         break;
                     case 'updateOrderStatus':
-                        const orderToUpdate = youwareService.getAllOrders().find(o => o.id.includes(fc.args.orderId));
+                        // FIX: Cast `orderId` and `newStatus` from function call arguments to their respective types.
+                        const orderIdToUpdate = fc.args.orderId as string;
+                        const newStatus = fc.args.newStatus as Order['status'];
+                        const orderToUpdate = youwareService.getAllOrders().find(o => o.id.includes(orderIdToUpdate));
                         if (orderToUpdate) {
-                            youwareService.updateOrderStatus(orderToUpdate.id, fc.args.newStatus);
-                            functionResult = `Done! I've updated the status for order ${orderToUpdate.id.slice(-6)} to ${fc.args.newStatus}.`;
+                            youwareService.updateOrderStatus(orderToUpdate.id, newStatus);
+                            functionResult = `Done! I've updated the status for order ${orderToUpdate.id.slice(-6)} to ${newStatus}.`;
                         } else {
-                             functionResult = `Sorry, I couldn't find an order with the ID containing "${fc.args.orderId}" to update.`;
+                             functionResult = `Sorry, I couldn't find an order with the ID containing "${orderIdToUpdate}" to update.`;
                         }
                         break;
                     default:

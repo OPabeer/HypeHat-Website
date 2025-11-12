@@ -1,8 +1,5 @@
 import React, { createContext, useState, useContext, ReactNode, useEffect, useCallback } from 'react';
 
-// Define the structure of your translation files.
-// Using 'any' for simplicity, but you could create a deep type definition.
-
 type Language = 'en' | 'bn';
 
 interface I18nContextType {
@@ -25,20 +22,32 @@ export const I18nProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
         return (storedLang === 'en' || storedLang === 'bn') ? storedLang : 'en';
     });
     
-    const [translations, setTranslations] = useState<{ [key: string]: any }>({});
+    const [translations, setTranslations] = useState<{ [key: string]: any } | null>(null);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const loadTranslations = async () => {
+            setIsLoading(true);
             try {
+                // Use absolute paths for fetch, which works reliably on deployed sites
                 const [enResponse, bnResponse] = await Promise.all([
                     fetch('/locales/en.json'),
                     fetch('/locales/bn.json')
                 ]);
+
+                if (!enResponse.ok || !bnResponse.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
                 const en = await enResponse.json();
                 const bn = await bnResponse.json();
                 setTranslations({ en, bn });
             } catch (error) {
                 console.error("Failed to load translation files:", error);
+                // Set empty translations to prevent total crash, keys will be shown as fallback
+                setTranslations({ en: {}, bn: {} });
+            } finally {
+                setIsLoading(false);
             }
         };
         loadTranslations();
@@ -51,13 +60,14 @@ export const I18nProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     }, [language]);
 
     const t = useCallback((key: string, ...args: any[]): any => {
-        if (!translations.en) return key; // Return key if not loaded
+        if (!translations) return key; // Return key if not loaded
         
         const keys = key.split('.');
         let result: any = translations[language];
         
         try {
             for (const k of keys) {
+                if (result === undefined) break;
                 result = result[k];
             }
 
@@ -65,6 +75,7 @@ export const I18nProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
                 // Fallback to English if key not found in current language
                 let fallbackResult: any = translations['en'];
                 for (const fk of keys) {
+                     if (fallbackResult === undefined) break;
                     fallbackResult = fallbackResult[fk];
                 }
                  if (fallbackResult === undefined) return key; // Return key if not found in english either
@@ -84,6 +95,23 @@ export const I18nProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
             return key;
         }
     }, [language, translations]);
+    
+    // Do not render the main application until translations are loaded
+    if (isLoading) {
+        return (
+            <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                height: '100vh',
+                backgroundColor: '#121212',
+                color: 'white',
+                fontFamily: 'sans-serif'
+            }}>
+                Loading...
+            </div>
+        );
+    }
 
     return (
         <I18nContext.Provider value={{ language, setLanguage, t }}>

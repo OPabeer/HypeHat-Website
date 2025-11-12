@@ -397,6 +397,18 @@ class YouwareService {
         const order = this.orders.find(o => o.id === orderId);
         if (order) {
             order.status = status;
+
+            // Set delivery dates when status becomes 'Shipped'
+            if (status === 'Shipped' && !order.shippedAt) { // Check !order.shippedAt to prevent resetting
+                const now = new Date();
+                order.shippedAt = now.toISOString();
+
+                const deliveryDays = order.userAddress.toLowerCase().includes('dhaka') ? 3 : 5;
+                const deliveryDate = new Date(now);
+                deliveryDate.setDate(now.getDate() + deliveryDays);
+                order.estimatedDeliveryDate = deliveryDate.toISOString();
+            }
+
             saveToStorage('orders', this.orders);
             return order;
         }

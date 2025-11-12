@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Order } from '../types';
@@ -69,6 +70,19 @@ export const OrderConfirmationPage: React.FC = () => {
                                 </div>
                             </div>
                         </div>
+
+                        {/* Estimated Delivery Section */}
+                        <div className="mt-8 pt-6 border-t border-white/20">
+                            <h2 className="text-xl font-semibold text-center mb-4">{t('orderConfirmationPage.estimatedDeliveryTitle')}</h2>
+                            <div className="bg-background p-4 rounded-md text-center">
+                                <p className="text-textSecondary">
+                                    {order.userAddress.toLowerCase().includes('dhaka')
+                                        ? t('orderConfirmationPage.deliveryTimeframeDhaka')
+                                        : t('orderConfirmationPage.deliveryTimeframeOutside')}
+                                </p>
+                            </div>
+                        </div>
+
 
                         {/* Product Guides Section */}
                         <div className="mt-8 pt-6 border-t border-white/20">

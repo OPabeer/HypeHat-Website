@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="cyber-glow">
 <head>
-    <meta charset="UTF--8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HypeHaat - Define Your Hype</title>
     
@@ -103,23 +103,15 @@
             color: var(--color-background);
         }
 
-        /* --- Animations & Transitions --- */
         @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         .animate-fadeInUp {
             animation: fadeInUp 0.7s ease-out forwards;
         }
 
-        /* General Transitions for smoother UI */
         button, a {
             transition: all 0.3s ease;
         }
@@ -128,7 +120,6 @@
             transition: all 0.3s ease;
         }
         
-        /* Scrolled header style */
         header.scrolled {
             background-color: var(--color-surface);
             box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
@@ -138,7 +129,6 @@
              height: 4.5rem; /* 72px */
              transition: height 0.3s ease;
         }
-
     </style>
 <script type="importmap">
 {
@@ -146,10 +136,10 @@
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "deepmerge": "https://aistudiocdn.com/deepmerge@^4.3.1",
     "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.5",
     "react-hook-form": "https://aistudiocdn.com/react-hook-form@^7.66.0",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
-    "deepmerge": "https://aistudiocdn.com/deepmerge@^4.3.1"
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
   }
 }
 </script>

@@ -130,6 +130,8 @@ export interface Order {
     transactionId?: string;
     status: 'Pending' | 'Shipped' | 'Delivered' | 'Cancelled';
     createdAt: string; // ISO string date
+    shippedAt?: string; // ISO string date when order was shipped
+    estimatedDeliveryDate?: string; // ISO string date
 }
 
 export interface ChatMessage {
